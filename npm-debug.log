@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '–g',
+1 verbose cli   '@angular/cli' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 error arg Argument starts with non-ascii dash, this is probably invalid: [ '–g', '@angular/cli' ]
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData –g
+9 silly fetchPackageMetaData @angular/cli
+10 silly fetchOtherPackageData –g
+11 silly cache add args [ '–g', null ]
+12 verbose cache add spec –g
+13 silly fetchNamedPackageData @angular/cli
+14 silly mapToRegistry name @angular/cli
+15 silly mapToRegistry scope (from package name) @angular
+16 verbose mapToRegistry no registry URL found in name for scope @angular
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry data Result {
+19 silly mapToRegistry   raw: '@angular/cli',
+19 silly mapToRegistry   scope: '@angular',
+19 silly mapToRegistry   escapedName: '@angular%2fcli',
+19 silly mapToRegistry   name: '@angular/cli',
+19 silly mapToRegistry   rawSpec: '',
+19 silly mapToRegistry   spec: 'latest',
+19 silly mapToRegistry   type: 'tag' }
+20 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcli
+21 silly cache add parsed spec Result {
+21 silly cache add   raw: '–g',
+21 silly cache add   scope: null,
+21 silly cache add   escapedName: null,
+21 silly cache add   name: null,
+21 silly cache add   rawSpec: '–g',
+21 silly cache add   spec: '/Users/gz5710/Documents/Codes/Angular4Space/–g',
+21 silly cache add   type: 'local' }
+22 error addLocal Could not install /Users/gz5710/Documents/Codes/Angular4Space/–g
+23 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/Users/gz5710/Documents/Codes/Angular4Space/–g'
+23 silly fetchPackageMetaData     at Error (native)
+23 silly fetchPackageMetaData  error for –g { Error: ENOENT: no such file or directory, open '/Users/gz5710/Documents/Codes/Angular4Space/–g'
+23 silly fetchPackageMetaData     at Error (native)
+23 silly fetchPackageMetaData   errno: -2,
+23 silly fetchPackageMetaData   code: 'ENOENT',
+23 silly fetchPackageMetaData   syscall: 'open',
+23 silly fetchPackageMetaData   path: '/Users/gz5710/Documents/Codes/Angular4Space/–g' }
+24 verbose request uri https://registry.npmjs.org/@angular%2fcli
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 10:22:03 PM
+27 verbose request id cffa5aa7783a8d69
+28 verbose etag W/"595cbac9-1a267"
+29 verbose lastModified Wed, 05 Jul 2017 10:09:13 GMT
+30 http request GET https://registry.npmjs.org/@angular%2fcli
+31 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+32 info attempt registry request try #2 at 10:22:13 PM
+33 verbose etag W/"595cbac9-1a267"
+34 verbose lastModified Wed, 05 Jul 2017 10:09:13 GMT
+35 http request GET https://registry.npmjs.org/@angular%2fcli
+36 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+37 info attempt registry request try #3 at 10:23:13 PM
+38 verbose etag W/"595cbac9-1a267"
+39 verbose lastModified Wed, 05 Jul 2017 10:09:13 GMT
+40 http request GET https://registry.npmjs.org/@angular%2fcli
+41 silly get cb [ 304, undefined ]
+42 verbose etag https://registry.npmjs.org/@angular%2fcli from cache
+43 verbose get saving @angular/cli to /Users/gz5710/.npm/registry.npmjs.org/_40angular_252fcli/.cache.json
+44 verbose correctMkdir /Users/gz5710/.npm correctMkdir not in flight; initializing
+45 silly rollbackFailedOptional Starting
+46 silly rollbackFailedOptional Finishing
+47 silly runTopLevelLifecycles Finishing
+48 silly install printInstalled
+49 verbose stack Error: ENOENT: no such file or directory, open '/Users/gz5710/Documents/Codes/Angular4Space/–g'
+49 verbose stack     at Error (native)
+50 verbose cwd /Users/gz5710/Documents/Codes/Angular4Space
+51 error Darwin 17.7.0
+52 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "–g" "@angular/cli"
+53 error node v6.11.0
+54 error npm  v3.10.10
+55 error path /Users/gz5710/Documents/Codes/Angular4Space/–g
+56 error code ENOENT
+57 error errno -2
+58 error syscall open
+59 error enoent ENOENT: no such file or directory, open '/Users/gz5710/Documents/Codes/Angular4Space/–g'
+60 error enoent ENOENT: no such file or directory, open '/Users/gz5710/Documents/Codes/Angular4Space/–g'
+60 error enoent This is most likely not a problem with npm itself
+60 error enoent and is related to npm not being able to find a file.
+61 verbose exit [ -2, true ]
