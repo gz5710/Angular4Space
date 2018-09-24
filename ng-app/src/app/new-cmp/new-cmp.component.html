@@ -1,0 +1,41 @@
+<p>
+  {{ newcmp }}
+</p>
+<p>
+  new-cmp works!
+</p>
+
+<div>
+  <select [(ngModel)]="selectedval.id" (change)="changeOption($event)">
+    <option *ngFor="let i of months" [value]="i.id" >{{ i.text }}</option> 
+  </select>
+</div>
+
+<div>
+  <span *ngIf="isavailable; then condtrue else condfalse">Valable : {{!isavailable}}</span>
+  <ng-template #condfalse>Invalid</ng-template>
+  <ng-template #condtrue>Valid</ng-template>
+</div>
+
+<button (click)="clickme($event)">Click meeee</button>
+
+<div>
+  <h1>Pipes</h1>
+  <p>{{ newcmp | lowercase }}</p>
+  <p>{{ newcmp | uppercase }}</p>
+
+  <p>{{ 34.33 | currency:"USD" }}</p>
+  <p>{{ 34.33 | currency:"CNY":false }}</p>
+
+  <p>{{ selectedval | json }}</p>
+  <p>{{ selectedval.id | percent }}</p>
+  <p>{{ months | slice:2:6 | json }}</p>
+
+</div>
+<div>
+  <a routerLink="newcmproutingg">New component for routing</a>
+  <br/>
+  <br/>
+  <br/>
+  <router-outlet></router-outlet>
+</div>

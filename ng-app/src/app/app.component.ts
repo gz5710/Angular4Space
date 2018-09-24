@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-app';
+  title = 'ng app';
+  content = 'This is a message from app.component';
+  isvalid = true;
 }
