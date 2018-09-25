@@ -11,5 +11,4 @@ export class NewcmproutingComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

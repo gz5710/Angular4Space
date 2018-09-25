@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { NewcmproutingComponent } from './newcmprouting/newcmprouting.component';
+import { MyserviceService } from './myservice.service'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { NewcmproutingComponent } from './newcmprouting/newcmprouting.component'
       }
     ])
   ],
-  providers: [],
+  providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

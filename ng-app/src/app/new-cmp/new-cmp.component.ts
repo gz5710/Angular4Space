@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Alert } from 'selenium-webdriver';
+import { MyserviceService } from '../myservice.service';
 
 @Component({
   selector: 'app-new-cmp',
@@ -30,10 +31,12 @@ export class NewCmpComponent implements OnInit {
   //           "October", "November", "December"];
   
   isavailable = true;
+  todaydate;
 
-  constructor() { }
+  constructor(private myService: MyserviceService) { }
 
   ngOnInit() {
+    this.todaydate = this.myService.showTodayDate();
   }
 
   clickme(e){
