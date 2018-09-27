@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class MyserviceService {
 
+  serviceprop = "New Service Created.";
+
   constructor() { }
 
   showTodayDate(){

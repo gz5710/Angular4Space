@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Alert } from 'selenium-webdriver';
 import { MyserviceService } from '../myservice.service';
+import { Http } from '@angular/http';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-new-cmp',
@@ -32,11 +34,29 @@ export class NewCmpComponent implements OnInit {
   
   isavailable = true;
   todaydate;
+  cmpProp;
 
-  constructor(private myService: MyserviceService) { }
+  httpdata;
+  private cityname = "McKenziehaven";
+  selectedUser
+
+  constructor(private myService: MyserviceService, private httper: Http) { }
 
   ngOnInit() {
     this.todaydate = this.myService.showTodayDate();
+    console.log(this.myService.serviceprop);
+    this.myService.serviceprop = "Component Property Created.";
+    this.cmpProp = this.myService.serviceprop;
+
+    // HttpService
+    this.httper.get("http://jsonplaceholder.typicode.com/users?address.city="+this.cityname).
+                pipe(
+                  map((response) => response.json())
+                ).subscribe((data) => {
+                                        console.log(data);
+                                        this.httpdata = data;
+                                        this.selectedUser = data[0];
+                                      })
   }
 
   clickme(e){

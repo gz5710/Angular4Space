@@ -24,8 +24,10 @@
   <p>{{ newcmp | lowercase }}</p>
   <p>{{ newcmp | uppercase }}</p>
 
-  <p>{{ 34.33 | currency:"USD" }}</p>
-  <p>{{ 34.33 | currency:"CNY":false }}</p>
+  <p>{{ 34.33 | currency:"USD" }} => currency:"USD"</p>
+  <p>{{ 34.33 | currency:"CNY":"symbol-narrow" }} => currency:"CNY":"symbol-narrow"</p>
+  <p>{{ 34.33 | currency:"EUR":"symbol" }} => currency:"EUR":"symbol"</p>
+  <p>{{ 34.33 | currency:"CNY":"code" }} => currency:"CNY":"code"</p>
 
   <p>{{ selectedval | json }}</p>
   <p>{{ selectedval.id | percent }}</p>
@@ -38,4 +40,14 @@
   <br/>
   <br/>
   <router-outlet></router-outlet>
+</div>
+<div>
+  <p>{{cmpProp}}</p>
+</div>
+<div>
+  <h1>Got some users from HTTP</h1>
+  <hr>
+  <ul *ngFor="let j of httpdata">
+    <li>{{j.name}} from {{j.address.city}}</li>
+  </ul>
 </div>
